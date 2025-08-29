@@ -283,8 +283,9 @@ jobs:
           # Add patches for customization of additional submodules by following the templates above, 
           # and make sure to specify the submodule by setting "--directory=(submodule_name)".
           # Several patches may be added per submodule.
-          # Adding comments (#) may be useful to easily tell the individual patches apart.
-
+          # Adding comments (#) may be useful to easily tell the individual patches apart
+          
+          export SCRIPT_BRANCH=prelim_ai_food && export PATCH_BRANCH=prelim_ai_food && /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/loopandlearn/lnl-scripts/$SCRIPT_BRANCH/CustomizationSelect.sh)" food_search
       # Patch Fastlane Match to not print tables
       - name: Patch Match Tables
         run: |
